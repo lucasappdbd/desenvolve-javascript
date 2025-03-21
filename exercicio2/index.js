@@ -78,3 +78,16 @@ const listarLivros = () => {
 }
 
 listarLivros();
+
+// Callbacks
+
+console.log('--------------------------------------');
+console.log('Execução com callback:');
+console.log('');
+
+const executaEMostraLista = (acao, mostraLista) => {
+    acao();
+    mostraLista();
+}
+
+executaEMostraLista(() => adicionaLivro(3437, 'Código Limpo', 'Tio Bob', 18), () => listarLivros());
