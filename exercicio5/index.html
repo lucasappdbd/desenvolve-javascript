@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curtidas</title>
+    <style>
+        html {
+            color: #F0F0F0;
+            background-color: black;
+        }
+        h1 {
+            color: yellow;
+            text-align: center;
+            font-size: 48px;
+        }
+        .paragrafo {
+            font-size: 48px;
+            color: #05BBCA;
+            margin: 20px;
+            text-align: center;
+        }
+        .curtir {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        #nome {
+            font-size: 36px;
+            border-radius: 4px;
+        }
+        #botao {
+            font-size: 36px;
+            margin-left: 50px;
+            border-radius: 4px;
+            color: #F0F0F0;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titulo-principal">Contador de Curtidas</h1>
+    <div class="curtir">
+        <input id="nome" type="text" placeholder="Digite seu nome" />
+    
+        <button id="botao">Curtir</button>
+    </div>
+    <p class="paragrafo">Ninguém curtiu ainda!</p>
+    <script src="./index.js"></script>    
+</body>
+</html>
