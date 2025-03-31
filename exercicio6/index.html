@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 - Lista de Tarefas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        #container-tarefas {
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .item-tarefa {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 8px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .item-tarefa.concluida {
+            text-decoration: line-through;
+            color: #888;
+            background-color: #d4edda;
+        }
+
+        .item-tarefa .texto-tarefa {
+            flex: 1;
+            padding-left: 10px;
+        }
+
+        .item-tarefa input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .container-input {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #nova-tarefa {
+            padding: 10px;
+            width: 500px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #adicionar-tarefa {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        #adicionar-tarefa:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Tarefas</h1>
+    
+    <div class="container-input">
+        <input type="text" id="nova-tarefa" placeholder="Digite aqui...">
+        <button id="adicionar-tarefa">Adicionar</button>
+    </div>
+
+    <div id="container-tarefas">
+        <!-- A lista de tarefas será adicionada aqui via script -->
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
