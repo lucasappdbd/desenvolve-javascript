@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 9 - Busca de Usuários</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .container {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 660px;
+        text-align: center;
+    }    
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 550px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 16px;
+    }
+
+    button {        
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        margin-left: 5px;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    #listaUsuarios {
+        margin-top: 20px;
+    }
+
+    .usuario {
+        width: 640px;
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 4px;
+        box-shadow: 0 2px 4px black;
+    }
+
+    #semResultados {
+        color: red;
+        margin-top: 10px;
+        display: none;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Busca de Usuários no GitHub</h1>
+        <input type="text" id="buscar" placeholder="Digite o nome do usuário">
+        <button id="botaoPesquisar">Buscar</button>
+        <div id="listaUsuarios"></div>
+        <p id="semResultados">Não foram encontrados usuários para esta pesquisa!</p>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
