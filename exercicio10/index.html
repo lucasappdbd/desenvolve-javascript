@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 10 - Feed de Rede Social</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+        #form-container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        #feed {
+            margin-top: 370px; /* Ajuste para o formulário fixo e os avatares */
+            padding: 20px;
+            scroll-padding-top: 400px;
+        }
+        .post {
+            background-color: #fff;
+            margin-bottom: 20px;
+            padding: 15px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            scroll-padding-top: 400px;
+        }
+        .post img {
+            width: 500px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .post-usuario {
+            display: flex;
+            align-items: center;
+        }
+        .post-usuario img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .botao-curtir {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .botao-curtir:disabled {
+            background-color: #ccc;
+        }
+        .avatar-selecao img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .avatar-selecao {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>    
+    <div id="form-container">
+        <h1>Rede Social de Gatos</h1>
+        <h2>Postar</h2>
+        <div class="avatar-selecao">
+            <h3>Escolha seu avatar</h3>
+            <img src="./avatares/avatar1.png" alt="Avatar 1" onclick="selectAvatar('./avatares/avatar1.png')">
+            <img src="./avatares/avatar2.png" onclick="selectAvatar('./avatares/avatar2.png')">
+            <img src="./avatares/avatar3.png" alt="Avatar 3" onclick="selectAvatar('./avatares/avatar3.png')">
+            <img src="./avatares/avatar4.png" alt="Avatar 4" onclick="selectAvatar('./avatares/avatar4.png')">
+            <img src="./avatares/avatar5.png" alt="Avatar 5" onclick="selectAvatar('./avatares/avatar5.png')">
+        </div>
+        <input type="text" id="nomeUsuario" placeholder="Digite seu nome" /><br><br>
+        <textarea id="postagem-texto" rows="4" cols="50" placeholder="O que está acontecendo?"></textarea><br>
+        <button id="botao-postar" disabled>Postar</button>
+    </div>
+    <div id="feed">
+        <!-- O feed de postagens será inserido aqui via script -->
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
